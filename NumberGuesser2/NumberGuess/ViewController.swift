@@ -51,6 +51,22 @@ class ViewController: UIViewController {
         
     }
     
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return model.compare(to: Int(self.GuessTextField.text!)!) == 0
+    }
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let tableViewController = segue.destination as? MyTableViewController
+        if let tvcnn = tableViewController {
+            tvcnn.model = self.model
+        }
+        
+    }
+    
     @IBOutlet weak var GuessButton: UIButton!
     @IBOutlet weak var StatusLabel: UILabel!
     @IBOutlet weak var GuessTextField: UITextField!

@@ -20,6 +20,7 @@
 		CE14A0E5270F065B00507D26 /* kissing-cat_1f63d.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */; };
 		CE14A0E6270F065B00507D26 /* crying-cat_1f63f.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */; };
 		CE14A0EB270F065F00507D26 /* weary-cat_1f640.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0EA270F065F00507D26 /* weary-cat_1f640.png */; };
+		CEE852162758ECA200B45B66 /* MyTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEE852152758ECA200B45B66 /* MyTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kissing-cat_1f63d.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crying-cat_1f63f.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0EA270F065F00507D26 /* weary-cat_1f640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "weary-cat_1f640.png"; sourceTree = SOURCE_ROOT; };
+		CEE852152758ECA200B45B66 /* MyTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				7F255AE726FC882E00A13648 /* Assets.xcassets */,
 				7F255AE926FC882E00A13648 /* LaunchScreen.storyboard */,
 				7F255AEC26FC882E00A13648 /* Info.plist */,
+				CEE852152758ECA200B45B66 /* MyTableViewController.swift */,
 			);
 			path = NumberGuess;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 				7F255AE326FC882D00A13648 /* ViewController.swift in Sources */,
 				7F255ADF26FC882D00A13648 /* AppDelegate.swift in Sources */,
 				7F1682CF272176DF00E4A464 /* NumberGuessModel.swift in Sources */,
+				CEE852162758ECA200B45B66 /* MyTableViewController.swift in Sources */,
 				7F255AE126FC882D00A13648 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
