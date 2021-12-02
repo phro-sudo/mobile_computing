@@ -16,8 +16,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.model.target = Int.random(in: 0..<100)
+        print(self.model.target)
         
-        print(target);
     }
     
     @IBAction func onTouchUpInside(_ sender: UIButton) {
@@ -26,12 +26,15 @@ class ViewController: UIViewController {
         
         if model.isValid(string: self.GuessTextField.text) {
             
-            let compare = model.compare(to: Int(self.GuessTextField.text!)!)
+            let guess: Int = Int(self.GuessTextField.text!)!
+            
+            self.model.addGuess(guess: guess)
+            
+            let compareResult = model.compare(to: guess)
         
-
             Emoji.image = self.model.getImage(tries: model.guessCounter)
-            Emoji.isHidden = compare == 0
-            self.StatusLabel.text = self.model.getText(compare: compare)
+            Emoji.isHidden = compareResult != 0
+            self.StatusLabel.text = self.model.getText(compare: compareResult)
             
             
             GuessTextField.resignFirstResponder()

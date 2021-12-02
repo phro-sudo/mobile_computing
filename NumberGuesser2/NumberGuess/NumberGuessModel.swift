@@ -10,6 +10,7 @@ import UIKit
 
 class NumberGuessModel {
     
+    var guesses = [Int]()
     var target = 0
     var guessCounter = 0
     
@@ -54,7 +55,6 @@ class NumberGuessModel {
         switch (compare) {
         case -100..<0:
             text = "The number is lower than the target!"
-            
         case 0:
             text = "You got the number correct!"
         default:
@@ -64,4 +64,11 @@ class NumberGuessModel {
         return text
         
     }
+    
+    func addGuess(guess: Int) -> Void {
+        
+        guesses.append(guess);
+    
+    }
+    
 }
