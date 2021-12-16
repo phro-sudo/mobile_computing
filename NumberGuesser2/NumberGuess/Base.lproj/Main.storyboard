@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lHG-pV-JeZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DQ8-vV-RhA">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -46,6 +46,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zwE-yi-VWm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="426" y="84"/>
+        </scene>
+        <!--Thread Table View Controller-->
+        <scene sceneID="mD1-qm-acI">
+            <objects>
+                <tableViewController id="DQ8-vV-RhA" customClass="ThreadTableViewController" customModule="NumberGuess" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="meE-Oj-K9k">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="ZJv-cB-efm">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZJv-cB-efm" id="M2i-FV-mqu">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="DQ8-vV-RhA" id="xLI-3g-OMi"/>
+                            <outlet property="delegate" destination="DQ8-vV-RhA" id="3i1-3b-3fz"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lor-6R-Xab" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1433" y="-787"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sbh-TM-6HM">
@@ -96,9 +124,8 @@
                             <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cat-face_1f431.png" translatesAutoresizingMaskIntoConstraints="NO" id="oXL-wo-c0e">
                                 <rect key="frame" x="20" y="88" width="374" height="120"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5s-Fp-Ye1">
-                                <rect key="frame" x="148" y="490" width="119" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5s-Fp-Ye1">
+                                <rect key="frame" x="147.5" y="513" width="119" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Show Guesses"/>
                             </button>
@@ -111,9 +138,11 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXL-wo-c0e" secondAttribute="trailing" constant="20" id="IpP-rl-Lmw"/>
                             <constraint firstItem="uPs-AM-O80" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KDV-sf-qkg"/>
                             <constraint firstItem="oXL-wo-c0e" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="OIy-Ak-Dfg"/>
+                            <constraint firstItem="E5s-Fp-Ye1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cXu-HZ-zsh"/>
                             <constraint firstItem="rUF-1X-tAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iYh-hl-8QK"/>
                             <constraint firstItem="rUF-1X-tAE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="jjt-6u-TsH"/>
                             <constraint firstItem="2a9-rk-2Xf" firstAttribute="top" secondItem="uPs-AM-O80" secondAttribute="bottom" constant="24" id="lkU-UO-uTp"/>
+                            <constraint firstItem="E5s-Fp-Ye1" firstAttribute="top" secondItem="2a9-rk-2Xf" secondAttribute="bottom" constant="50" id="t1b-VP-pHV"/>
                             <constraint firstItem="oXL-wo-c0e" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="yTP-Ow-wVm"/>
                             <constraint firstItem="oXL-wo-c0e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ys5-V6-aIb"/>
                             <constraint firstItem="2a9-rk-2Xf" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ztV-Zi-RkB"/>

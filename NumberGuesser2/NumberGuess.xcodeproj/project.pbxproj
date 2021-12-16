@@ -16,6 +16,7 @@
 		7F255AEB26FC882E00A13648 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F255AE926FC882E00A13648 /* LaunchScreen.storyboard */; };
 		7F255AF626FC882E00A13648 /* NumberGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F255AF526FC882E00A13648 /* NumberGuessTests.swift */; };
 		7F255B0126FC882E00A13648 /* NumberGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F255B0026FC882E00A13648 /* NumberGuessUITests.swift */; };
+		7FC0DE3F276B55010014A875 /* ThreadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */; };
 		CE14A0DF270F033900507D26 /* cat-face_1f431.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0DE270F033900507D26 /* cat-face_1f431.png */; };
 		CE14A0E5270F065B00507D26 /* kissing-cat_1f63d.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */; };
 		CE14A0E6270F065B00507D26 /* crying-cat_1f63f.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */; };
@@ -56,6 +57,7 @@
 		7F255AFC26FC882E00A13648 /* NumberGuessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NumberGuessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F255B0026FC882E00A13648 /* NumberGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGuessUITests.swift; sourceTree = "<group>"; };
 		7F255B0226FC882E00A13648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadTableViewController.swift; sourceTree = "<group>"; };
 		CE14A0DE270F033900507D26 /* cat-face_1f431.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat-face_1f431.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kissing-cat_1f63d.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crying-cat_1f63f.png"; sourceTree = SOURCE_ROOT; };
@@ -124,6 +126,7 @@
 				7F255AE926FC882E00A13648 /* LaunchScreen.storyboard */,
 				7F255AEC26FC882E00A13648 /* Info.plist */,
 				CEE852152758ECA200B45B66 /* MyTableViewController.swift */,
+				7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */,
 			);
 			path = NumberGuess;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				7F1682CF272176DF00E4A464 /* NumberGuessModel.swift in Sources */,
 				CEE852162758ECA200B45B66 /* MyTableViewController.swift in Sources */,
 				7F255AE126FC882D00A13648 /* SceneDelegate.swift in Sources */,
+				7FC0DE3F276B55010014A875 /* ThreadTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
