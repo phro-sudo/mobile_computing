@@ -17,6 +17,7 @@
 		7F255AF626FC882E00A13648 /* NumberGuessTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F255AF526FC882E00A13648 /* NumberGuessTests.swift */; };
 		7F255B0126FC882E00A13648 /* NumberGuessUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F255B0026FC882E00A13648 /* NumberGuessUITests.swift */; };
 		7FC0DE3F276B55010014A875 /* ThreadTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */; };
+		7FC0DE41276B62530014A875 /* todoBodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FC0DE40276B62530014A875 /* todoBodel.swift */; };
 		CE14A0DF270F033900507D26 /* cat-face_1f431.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0DE270F033900507D26 /* cat-face_1f431.png */; };
 		CE14A0E5270F065B00507D26 /* kissing-cat_1f63d.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */; };
 		CE14A0E6270F065B00507D26 /* crying-cat_1f63f.png in Resources */ = {isa = PBXBuildFile; fileRef = CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */; };
@@ -58,6 +59,7 @@
 		7F255B0026FC882E00A13648 /* NumberGuessUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberGuessUITests.swift; sourceTree = "<group>"; };
 		7F255B0226FC882E00A13648 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadTableViewController.swift; sourceTree = "<group>"; };
+		7FC0DE40276B62530014A875 /* todoBodel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todoBodel.swift; sourceTree = "<group>"; };
 		CE14A0DE270F033900507D26 /* cat-face_1f431.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cat-face_1f431.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0E3270F065B00507D26 /* kissing-cat_1f63d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "kissing-cat_1f63d.png"; sourceTree = SOURCE_ROOT; };
 		CE14A0E4270F065B00507D26 /* crying-cat_1f63f.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "crying-cat_1f63f.png"; sourceTree = SOURCE_ROOT; };
@@ -127,6 +129,7 @@
 				7F255AEC26FC882E00A13648 /* Info.plist */,
 				CEE852152758ECA200B45B66 /* MyTableViewController.swift */,
 				7FC0DE3E276B55010014A875 /* ThreadTableViewController.swift */,
+				7FC0DE40276B62530014A875 /* todoBodel.swift */,
 			);
 			path = NumberGuess;
 			sourceTree = "<group>";
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FC0DE41276B62530014A875 /* todoBodel.swift in Sources */,
 				7F255AE326FC882D00A13648 /* ViewController.swift in Sources */,
 				7F255ADF26FC882D00A13648 /* AppDelegate.swift in Sources */,
 				7F1682CF272176DF00E4A464 /* NumberGuessModel.swift in Sources */,

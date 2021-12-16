@@ -11,13 +11,18 @@ class ThreadTableViewController: UITableViewController {
     
     let queue = DispatchQueue(label: "download")
     let path = "https://jsonplaceholder.typicode.com/todos"
+    var model = ToDoModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let url = URL(string: path) {
             queue.async {
-                self.download(url: url)
+                let todos = self.download(url: url)
+                DispatchQueue.main.async {
+                    self.model.todos = todos
+                    self.tableView.reloadData()
+                }
             }
         }
 
@@ -32,23 +37,28 @@ class ThreadTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return model.todos.count
     }
     
-    func download(url: URL) {
+    func download(url: URL) -> [ToDo] {
         
         print("downloading \(url)")
+        var todos = [ToDo]()
         if let data = try? Data(contentsOf: url) {
             let obj = try? JSONSerialization.jsonObject(with: data, options: [])
             if let array = obj as? [[String: Any]] {
                 for todo in array {
                     if let id = todo["id"] as? Int, let title = todo["title"] as? String {
-                        print("id: \(id), title: \(title)")
+                        
+                        let temp = ToDo()
+                        temp.id = id
+                        temp.title = title
+                        todos.append(temp)
                     }
                 }
             }
@@ -56,17 +66,20 @@ class ThreadTableViewController: UITableViewController {
             print("Kein Parsing")
         }
         
+        return todos
+        
     }
 
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
-        // Configure the cell...
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDo", for: indexPath)
+
+        let todo = self.model.todos[indexPath.row]
+        cell.textLabel?.text = todo.title
+        cell.detailTextLabel?.text = "\(todo.id)"
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
