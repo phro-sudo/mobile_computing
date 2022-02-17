@@ -45,6 +45,8 @@
                     <connections>
                         <outlet property="BananaPanGesture" destination="Hh1-so-tJ6" id="4WQ-8d-Rku"/>
                         <outlet property="MonkeyPanGesture" destination="uKK-OD-DYg" id="9Um-SY-Ysc"/>
+                        <outlet property="banana" destination="l9n-ID-7da" id="Fvy-2a-qmR"/>
+                        <outlet property="monkee" destination="AAH-z6-LYK" id="5Pr-bn-B0u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

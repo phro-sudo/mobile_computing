@@ -33,10 +33,15 @@ import AVFoundation
 
 class ViewController: UIViewController {
 
+  @IBOutlet weak var banana: UIImageView!
+  @IBOutlet weak var monkee: UIImageView!
   @IBOutlet var BananaPanGesture: UIPanGestureRecognizer!
   @IBOutlet var MonkeyPanGesture: UIPanGestureRecognizer!
   private var chompPlayer: AVAudioPlayer?
   private var laughPlayer: AVAudioPlayer?
+  
+  var deltaX: Int!
+  var deltaY: Int!
 
   func createPlayer(from filename: String) -> AVAudioPlayer? {
     guard let url = Bundle.main.url(
@@ -57,8 +62,32 @@ class ViewController: UIViewController {
     return player
   }
   
+  @objc func checkIntersect() {
+    if (banana.frame.intersects(monkee.frame)) {
+      laughPlayer?.play()
+    }
+  }
+  
+  @objc func moveBananaaa () {
+    
+    banana.center.x += deltaX
+    banana.center.y += deltaY
+    
+    var cx = Float(banana.center.x)
+    var cy = Float(banana.center.y)
+    var border = Float(50)
+    
+    if (cx < border) {
+      
+    }
+    
+  }
+  
   override func viewDidLoad() {
     super.viewDidLoad()
+    
+    Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(moveBananaaa), userInfo: nil, repeats: true)
+    Timer.scheduledTimer(timeInterval: 0.001, target: self, selector: #selector(checkIntersect), userInfo: nil, repeats: true)
     
     // 1
     let imageViews = view.subviews.filter {
@@ -121,10 +150,10 @@ class ViewController: UIViewController {
     // 1
     let velocity = gesture.velocity(in: view)
     let magnitude = sqrt((velocity.x * velocity.x) + (velocity.y * velocity.y))
-    let slideMultiplier = magnitude / 2000
+    let slideMultiplier = magnitude / 200
 
     // 2
-    let slideFactor = 0.01 * slideMultiplier
+    let slideFactor = 0.1 * slideMultiplier
     // 3
     var finalPoint = CGPoint(
       x: gestureView.center.x + (velocity.x * slideFactor),
